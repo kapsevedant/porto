@@ -1,0 +1,137 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+}
+
+.image-section {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-section {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.intro-section h4 {
+  font-size: 1.3rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #A2EE00;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #A2EE00;
+}
+
+/* Animated Downward Arrow */
+.scroll-down {
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #A2EE00;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* About Me Section */
+#about {
+  margin-top: 40px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-section,
+  .intro-section {
+    flex: 1 1 100%;
+  }
+
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .about-content{
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro-section h4 {
+    font-size: 1rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}

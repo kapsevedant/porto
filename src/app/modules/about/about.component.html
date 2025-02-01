@@ -1,0 +1,17 @@
+<div class="about-section">
+  <h2 class="section-title">About Me</h2>
+  <div class="experience-container">
+    <!-- Harrier Experience -->
+    <div class="experience-card" *ngFor="let i of company">
+      <div class="company-logo">
+        <img [src]="i.img" alt="Harrier Logo">
+      </div>
+      <div class="experience-info">
+        <h3 class="company-name">{{i.name}}</h3>
+        <p class="role">{{i.des}}</p>
+        <p class="duration">{{i.dur}}</p>
+        <p class="description">{{i.desc}}</p>
+      </div>
+    </div>
+  </div>
+</div>

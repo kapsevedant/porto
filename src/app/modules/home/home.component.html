@@ -1,0 +1,31 @@
+<div class="home-container">
+  <div class="content mt-5 mb-5">
+    <!-- Image Section -->
+    <div class="image-section">
+      <img src="./assets/cp4.svg" class="profile-image">
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="intro-section">
+      <h1>Hello, I'm Vedant Kapse</h1>
+      <h4>{{des}}</h4>
+      <a (click)="routeToPortfolio()" class="contact-btn" [style]="'cursor:pointer'">Portfolio</a>
+    </div>
+  </div>
+
+  <!-- Animated Downward Arrow -->
+  <div class="scroll-down mt-5" (click)="scrollToAbout()">
+    <i class="bi bi-arrow-down-circle"></i>
+  </div>
+
+  <!-- About Me Section -->
+  <h3 id="about" class="mt-5">About Me</h3>
+  <div class="about-content text-justify">
+    <div>
+      <img src="./assets/cp1.jpg">
+    </div>
+    <p class="mt-4">
+      I am a passionate software developer with strong expertise in Angular and frontend development. I enjoy building dynamic and responsive web applications. Currently, I am expanding my skills in backend technologies like Node.js and Express to develop full-stack applications. I love problem-solving and continuously improving my knowledge.
+    </p>
+  </div>
+</div>

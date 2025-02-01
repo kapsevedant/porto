@@ -1,0 +1,70 @@
+/* Sidebar (Desktop View) */
+.social-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #A2EE00;
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 1000;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.social-icon .social-name {
+  position: absolute;
+  left: 50px; /* Adjust the distance between icon and text */
+  opacity: 0; /* Initially hide the name */
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover .social-name {
+  opacity: 1; /* Show name on hover */
+}
+
+.social-icon:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .social-sidebar {
+    flex-direction: column; /* Keep the icons stacked vertically */
+    left: 10px; /* Stick to the left side on mobile */
+    top: 50%; /* Keep it vertically centered */
+    transform: translateY(-50%); /* Center it vertically */
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .social-icon .social-name {
+    display: none; /* Hide name on mobile */
+  }
+}

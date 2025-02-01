@@ -1,0 +1,59 @@
+.footer {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #333;
+}
+
+.scroll-top button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.scroll-top button:hover {
+  color: #007bff;
+}
+
+/* Ensure that the scroll button is positioned at the bottom right */
+.scroll-top {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.scroll-top button{
+  font-size: 40px;
+  color:#A2EE00;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-top {
+    /*position: fixed;*/
+    right: 20px;
+    bottom: 20px;
+  }
+}

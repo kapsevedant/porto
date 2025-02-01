@@ -1,0 +1,173 @@
+/* Global Styles */
+.container-fluid {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+/* Top Info Bar */
+.top-info-bar {
+  background-color: #f8f9fa;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bi {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #A2EE00;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Menu Toggle Button (Mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #A2EE00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container-fluid {
+    position: relative;
+  }
+
+  /* Hide top info bar by default on mobile */
+  .top-info-bar {
+    display: none;
+  }
+
+  .top-info-bar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background-color: #fff;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Navbar Mobile */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Mobile Menu */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  /* Ensuring Top Info Bar appears when menu is active */
+  .nav-links.active + .top-info-bar {
+    display: flex;
+  }
+}

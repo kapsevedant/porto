@@ -1,0 +1,45 @@
+<header class="container-fluid">
+  <!-- Top Info Bar -->
+  <div class="top-info-bar" [class.active]="isMenuOpen">
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="bi bi-geo-alt"></i>
+        <span>Maharashtra, India</span>
+      </div>
+      <div class="info-item">
+        <i class="bi bi-telephone"></i>
+        <span>+91-9529342942</span>
+      </div>
+      <div class="info-item">
+        <i class="bi bi-envelope"></i>
+        <a [href]="'mailto:' + gmail" target="_blank" class="text-dark text-decoration-none">
+        <span>{{gmail}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="logo">VedantK</a>
+      <button
+        class="menu-toggle"
+        (click)="toggleMenu()"
+        [class.active]="isMenuOpen"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li><a routerLink="home" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="about" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="skills" (click)="closeMenu()">Skills</a></li>
+      <li><a routerLink="portfolio" (click)="closeMenu()">Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
